@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title>Evanise Colombini</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/colors/blue.css">
+
+<!-- VUE JS
+================================================== -->
+<script src="https://unpkg.com/vue@next" defer></script>
+<script src="numerologia.js" defer></script>
+
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header Container
+================================================== -->
+<header id="header-container" class="fullwidth">
+
+	<!-- Header -->
+	<div id="header">
+		<div class="container">
+
+			<!-- Left Side Content -->
+			<div class="left-side">
+
+				<!-- Logo -->
+				<div id="logo">
+					<a href="index.html"><img src="images/logo_header_evanise.png" alt=""></a>
+				</div>
+
+
+				<div class="clearfix"></div>
+				<!-- Main Navigation / End -->
+
+			</div>
+			<!-- Left Side Content / End -->
+
+
+			<!-- Right Side Content / End -->
+			<div class="right-side">
+
+				<!-- Main Navigation -->
+				<nav id="navigation">
+					<ul id="responsive">
+						<li>
+							<a class="button ripple-effect button-header"
+								 href="https://wa.me/5531991626012?text=Ol%C3%A1%2C+aqui+%C3%A9+a+Evanise+Colombini.+Deixe+sua+mensagem+que+eu+retornarei+assim+que+poss%C3%ADvel."
+								 target="_blank">Contato whatsapp</a>
+						</li>
+						<li><a href="index.html">Home</a>
+
+						</li>
+
+						<li><a href="numerologia.html" class="current">Numerologia</a>
+
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Mobile Navigation Button -->
+				<span class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</span>
+
+			</div>
+			<!-- Right Side Content / End -->
+
+		</div>
+	</div>
+	<!-- Header / End -->
+
+</header>
+<div class="clearfix"></div>
+<!-- Header Container / End -->
+
+
+
+<!-- Intro Banner
+================================================== -->
+<!-- add class "disable-gradient" to enable consistent background overlay -->
+<div id="app">
+	<div class="intro-banner-numerologia"  data-background-image="images/numerologia.png">
+		<div class="container">
+
+			<!-- Intro Headline -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="banner-headline">
+						<h3>
+							<strong>Se conheça através dos números agora</strong>
+							<br>
+							<span>Preencha seu nome e nascimento<strong class="color"> abaixo</strong>:</span>
+						</h3>
+					</div>
+				</div>
+			</div>
+
+			<!-- Search Bar -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="intro-banner-search-form margin-top-95">
+
+						<!-- Search Field -->
+						<div class="intro-search-field with-autocomplete">
+							<label for="autocomplete-input" class="field-title ripple-effect">Nome completo</label>
+							<input id="autocomplete-input" type="text" placeholder="Seu nome completo" v-model="nomeCompleto">
+						</div>
+
+						<!-- Search Field -->
+						<div class="intro-search-field">
+							<label for ="intro-keywords" class="field-title ripple-effect">Nascimento</label>
+							<input id="intro-keywords" type="text" placeholder="Formato dd/mm/aaaa" v-model="dataNascimento">
+						</div>
+
+						<!-- Button -->
+						<div class="intro-search-button">
+							<a class="button ripple-effect" v-on:click="fazerCalculos()" href="#numeros-resultados">Calcular</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Features Jobs -->
+	<div class="margin-top-45 padding-top-65 padding-bottom-75" id="numeros-resultados" v-if="resultadoVisivel">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+
+					<!-- Section Headline -->
+					<div class="section-headline margin-top-0 margin-bottom-35">
+						<h3>Sua análise</h3>
+					</div>
+
+					<!-- Jobs Container -->
+					<div class="listings-container compact-list-layout margin-top-35">
+
+						<!-- Job Listing -->
+						<a href="#" class="job-listing with-apply-button">
+
+							<!-- Job Listing Details -->
+							<div class="job-listing-details">
+
+								<!-- Logo -->
+								<div class="job-listing-company-logo">
+									<h2>{{ nAlma }}</h2>
+								</div>
+
+								<!-- Details -->
+								<div class="job-listing-description">
+									<h3 class="job-listing-title">ALMA</h3>
+
+									<!-- Job Listing Footer -->
+									<div class="job-listing-footer">
+										<p>{{ descrAlma }}</p>
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<!-- Job Listing -->
+						<a href="single-job-page.html" class="job-listing with-apply-button">
+
+							<!-- Job Listing Details -->
+							<div class="job-listing-details">
+
+								<!-- Logo -->
+								<div class="job-listing-company-logo">
+									<h2>{{ nPersonalidade }}</h2>
+								</div>
+
+								<!-- Details -->
+								<div class="job-listing-description">
+									<h3 class="job-listing-title">PERSONALIDADE</h3>
+
+									<!-- Job Listing Footer -->
+									<div class="job-listing-footer">
+										<p>{{ descrPersonalidade }}</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<!-- Job Listing -->
+						<a href="single-job-page.html" class="job-listing with-apply-button">
+
+							<!-- Job Listing Details -->
+							<div class="job-listing-details">
+
+								<!-- Logo -->
+								<div class="job-listing-company-logo">
+									<h2>{{ nMissaoDeVida }}</h2>
+								</div>
+
+								<!-- Details -->
+								<div class="job-listing-description">
+									<h3 class="job-listing-title">MISSÃO DE VIDA</h3>
+
+									<!-- Job Listing Footer -->
+									<div class="job-listing-footer">
+										<p>{{ descrMissaoDeVida }}</p>
+									</div>
+								</div>
+
+							</div>
+						</a>
+
+						<!-- Job Listing -->
+						<a href="single-job-page.html" class="job-listing with-apply-button">
+
+							<!-- Job Listing Details -->
+							<div class="job-listing-details">
+
+								<!-- Logo -->
+								<div class="job-listing-company-logo">
+									<h2>{{ nCaminhoDeVida }}</h2>
+								</div>
+
+								<!-- Details -->
+								<div class="job-listing-description">
+									<h3 class="job-listing-title">CAMINHO DE VIDA</h3>
+
+									<!-- Job Listing Footer -->
+									<div class="job-listing-footer">
+										<p>{{ descrCaminhoDeVida }}</p>
+									</div>
+								</div>
+							</div>
+						</a>
+
+						<!-- Job Listing -->
+						<a href="single-job-page.html" class="job-listing with-apply-button">
+
+							<!-- Job Listing Details -->
+							<div class="job-listing-details">
+
+								<!-- Logo -->
+								<div class="job-listing-company-logo">
+									<h2>{{ nMaturidade }}</h2>
+								</div>
+
+								<!-- Details -->
+								<div class="job-listing-description">
+									<h3 class="job-listing-title">MATURIDADE</h3>
+
+									<!-- Job Listing Footer -->
+									<div class="job-listing-footer">
+										<p>{{ descrMaturidade }}</p>
+									</div>
+								</div>
+							</div>
+						</a>
+
+					</div>
+					<!-- Jobs Container / End -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Featured Jobs / End -->
+
+	</div>
+</div>
+<!-- Membership Plans / End-->
+
+<!-- Footer
+================================================== -->
+<div id="footer">
+
+
+
+	<!-- Footer Copyrights -->
+	<div class="footer-bottom-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<p>© 2023 <strong>Evanise Colombini</strong></p>
+					<p>evanisecolombini@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Copyrights / End -->
+
+</div>
+<!-- Footer / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Scripts
+================================================== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/mmenu.min.js"></script>
+<script src="js/tippy.all.min.js"></script>
+<script src="js/simplebar.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/snackbar.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/counterup.min.js"></script>
+<script src="js/magnific-popup.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+<script>
+// Snackbar for user status switcher
+$('#snackbar-user-status label').click(function() {
+	Snackbar.show({
+		text: 'Your status has been changed!',
+		pos: 'bottom-center',
+		showAction: false,
+		actionText: "Dismiss",
+		duration: 3000,
+		textColor: '#fff',
+		backgroundColor: '#383838'
+	});
+});
+</script>
+
+
+<!-- Google Autocomplete -->
+<script>
+	function initAutocomplete() {
+		 var options = {
+		  types: ['(cities)'],
+		  // componentRestrictions: {country: "us"}
+		 };
+
+		 var input = document.getElementById('autocomplete-input');
+		 var autocomplete = new google.maps.places.Autocomplete(input, options);
+	}
+
+	// Autocomplete adjustment for homepage
+	if ($('.intro-banner-search-form')[0]) {
+	    setTimeout(function(){
+	        $(".pac-container").prependTo(".intro-search-field.with-autocomplete");
+	    }, 300);
+	}
+
+</script>
+
+<!-- Google API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initAutocomplete"></script>
+
+</body>
+</html>
