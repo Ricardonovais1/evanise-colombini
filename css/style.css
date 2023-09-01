@@ -2177,6 +2177,15 @@ em.mm-counter+a.mm-fullsubopen+span {
 		top: calc(100% + 15px)
 	}
 
+	#logo img { border: none; max-width: 140px; height: auto; padding-top: 0;}
+
+	.section-headline { margin-top: 0; }
+
+	.intro-banner::before {
+		padding: 0;
+	}
+
+
 }
 
 @media (max-width: 480px) {
@@ -7498,8 +7507,9 @@ input:checked + .switch-button:before {
 	padding: 115px 0;
 	background-image: linear-gradient(to right,rgba(250,250,250,1) 20%, rgba(250,250,250,.95) 50% ,rgba(250,250,250,0.2) 80%,rgba(250,250,250,0) 100%),
 	url("../images/numerologia.png");
-
-	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right center;
 	position: relative;
 }
 
@@ -7887,7 +7897,7 @@ input:checked + .switch-button:before {
 	/* Photo Position */
 	.intro-banner:after,
 	.intro-banner:before {
-	    background: rgba(250,250,250,0.9);
+	    /* background: rgba(250,250,250,0.6); */
 	}
 
 	.intro-banner .background-image-container {
@@ -8077,6 +8087,11 @@ input:checked + .switch-button:before {
 @media (max-width: 768px) {
 	.category-box {
 	    flex: 0 0 50%;
+	}
+
+	.button-header {
+		width: 80%;
+		margin-left: 20px !important;
 	}
 }
 
