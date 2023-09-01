@@ -1365,7 +1365,9 @@ body #navigation ul ul ul { margin-top: 0; }
   #header-container.transparent-header { position: absolute; }
 }
 
-
+[v-cloak] {
+  display: none;
+}
 /* ---------------------------------- */
 /* Transparent Header
 ------------------------------------- */
