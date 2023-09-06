@@ -3659,9 +3659,7 @@ body .comment-content p { padding: 5px 0; }
 		display: inline-block
 	}
 
-	/* .blog-post {
-		margin-top: ;
-	}  */
+
 
 	/* Media Queries for Blog Post */
 	.blog-post { flex-direction: column; }
