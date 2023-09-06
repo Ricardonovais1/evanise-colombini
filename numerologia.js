@@ -6,7 +6,7 @@ const app = Vue.createApp({
         j: 1, k: 2, l: 3, m: 4, n: 5, o: 6, p: 7, q: 8, r: 9,
         s: 1, t: 2, u: 3, v: 4, w: 5, x: 6, y: 7, z: 8
       },
-      vogais: ['a', 'e', 'i', 'o', 'u'],
+      vogais: ['a', 'e', 'i', 'o', 'u', 'y'],
       nomeCompleto: '',
       dataNascimento: '',
       nAlma: 0,

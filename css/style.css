@@ -2953,6 +2953,7 @@ body #backtotop a {
 .single-page-header .container {
 	z-index: 100;
 	position: relative;
+	margin-top: 2rem;
 }
 
 .single-page-header:after,
@@ -3287,6 +3288,7 @@ body #backtotop a {
 /* Blog Post
 ------------------------------------- */
 .blog-post {
+	margin-top: 2rem;
     display: flex;
     background: #fff;
     margin-bottom: 35px;
@@ -3337,6 +3339,10 @@ body #backtotop a {
 .blog-post-content {
 	flex: 1;
 	padding: 35px;
+}
+
+.post-do-blog {
+	margin: 0 auto;
 }
 
 .blog-post-content h3,
@@ -3652,6 +3658,10 @@ body .comment-content p { padding: 5px 0; }
 		top: 0;
 		display: inline-block
 	}
+
+	/* .blog-post {
+		margin-top: ;
+	}  */
 
 	/* Media Queries for Blog Post */
 	.blog-post { flex-direction: column; }
